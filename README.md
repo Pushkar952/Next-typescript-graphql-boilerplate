@@ -1,28 +1,22 @@
-# NextJs Apollo Boilerplate
+# NextJs Typescript Graphql Boilerplate
 
-Boilerplate for building applications using Next.js and Apollo
+Boilerplate for building applications using Next.js with Typescript and Graphql client
 
 <img src="public/assets/images/banner.png" width="100%" alt="Banner">
 
-This boilerplate is made for those who want to start a new project using Apollo, Graphql, Redux, Chakra-ui, Axios, etc., which are often used in real-world projects along with Next.js.
+This boilerplate is made for those who want to start a new project using typescript, Apollo, Graphql, Redux, etc., which are often used in real-world projects along with Next.js.
 
-[Demo Site](https://nextjs-apollo-boilerplate-caribjin.vercel.app/)
 
 ## Features
-* 👌 Authentication via OAuth (Google, Github)
-* 🐵 Dark/Light Theme
-* 🚗 Responsive Layout
-* 🚀 Fetch and display SpaceX launches data via Apollo GraphQL
-     [SpaceX GraphQL APIs](https://api.spacex.land/graphql/)
-* 🇰🇷 Support for i18n (English/Korean)
-* 🛕 Maximize lighthouse score
-* 🚣‍♂️ [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
+* Authentication via OAuth (Google ..)
+* App Theme (Dark and Light)
+* Support for i18n
+* [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
  
 ## Teck Stack
 - [Next.js](https://nextjs.org)
-- [Chakra UI](https://chakra-ui.com/)
-- [Apollo](https://www.apollographql.com/)
-- [GraphQL](https://graphql.org/)
+- [UI Component Library](https://chakra-ui.com/)
+- [GraphQl Client](https://www.apollographql.com/)
 - [NextAuth](https://next-auth.js.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Emotion](https://emotion.sh/)
@@ -38,7 +32,7 @@ This boilerplate is made for those who want to start a new project using Apollo,
 1. Clone the repository:
 
    ```bash
-    git clone git@github.com:caribjin/nextjs-apollo-boilerplate.git
+    git clone https://github.com/Pushkar952/Next-typescript-graphql-boilerplate.git
    ```
 
 1. Install dependent packages:
@@ -67,7 +61,7 @@ This boilerplate is made for those who want to start a new project using Apollo,
 
 ## Deployment
 
-You can deploy your application to [Varcel]((https://vercel.com/signup/)) by clicking the button below.
+You can deploy your application to [Vercel]((https://vercel.com/signup/)) by clicking the button below.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcaribjin%2Fnextjs-apollo-boilerplate&env=GOOGLE_CLIENT_ID,GOOGLE_CLIENT_SECRET,)
 
