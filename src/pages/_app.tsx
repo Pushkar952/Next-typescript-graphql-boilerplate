@@ -20,7 +20,7 @@ function App({ Component, pageProps: { session, ...pageProps } }: AppProps): JSX
           <Provider store={store}>
             <Layout>
               <Head>
-                <title>NextJs TypeScript with graphql client Boilerplate</title>
+                <title>NextJs TypeScript with graphql client </title>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
               </Head>
               <Component {...pageProps} />

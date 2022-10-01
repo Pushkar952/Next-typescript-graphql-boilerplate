@@ -1,5 +1,4 @@
 import { Box, Container, useTheme } from '@chakra-ui/react';
-import { Button } from '@/components';
 import React from 'react';
 
 export const Main: React.FC = () => {
@@ -8,11 +7,11 @@ export const Main: React.FC = () => {
   return (
     <Box bg="gradient" color="white" textAlign="center" py={10}>
       <h1 color="textColor" style={{ fontSize: theme.fontSizes['5xl'] }}>
-        NextJs Apollo Boilerplate
+        NextJs TypeScript GraphQl Boilerplate
       </h1>
       <Container w="500px" mb="10" fontStyle="italic">
-        Next.js and Apollo-Client web application, designed for learning and real-world
-        applicability.
+        NextJs Typescript GraphQl Boilerplate to qucikly get started with production
+        ready app.
       </Container>
     </Box>
   );

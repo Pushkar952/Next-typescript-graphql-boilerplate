@@ -39,10 +39,10 @@ class MainDocument extends Document {
       <Html lang="en">
         <Head>
           <meta charSet="utf-8" />
-          <meta name="description" content="nextjs apollo boilerplate" />
+          <meta name="description" content="nextjs graphQl boilerplate" />
           <meta
             name="keywords"
-            content="boilerplate, next.js, typescript, react.js, graphql, apollo, chakra-ui, styled-component, redux, redux-toolkit, eslint, prettier"
+            content="boilerplate, next.js, typescript, react.js, graphql, apollo, styled-component, redux, redux-toolkit, eslint, prettier"
           />
         </Head>
         <body>

@@ -8,6 +8,10 @@ module.exports = withPlugins(
     withBundleAnalyzer({
       enabled: process.env.ANALYZE === true,
       compress: true,
+      images: {
+        domains: ['lh3.googleusercontent.com'],
+        formats: ['image/avif', 'image/webp'],
+      },
       webpack(config) {
         const prod = process.env.NODE_ENV === 'production';
         const plugins = [...config.plugins];

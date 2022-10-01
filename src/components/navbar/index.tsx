@@ -1,10 +1,17 @@
 import React from 'react';
 import NextLink from 'next/link';
 
-export const NavBar: React.FC = () => {
+interface LinkProps {
+  href: string;
+  feature: string;
+
+}
+
+export const NavBar = (props: LinkProps) => {
+  const { href, feature } = props;
   return (
-    <NextLink href="/launches">
-      <a href="#">Restricted Data</a>
+    <NextLink href={href}>
+      <a href="#">{feature}</a>
     </NextLink>
   );
 };
