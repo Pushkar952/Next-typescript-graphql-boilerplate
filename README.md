@@ -1,0 +1,1 @@
+# Next-typescript-graphql-boilerplate
