@@ -11,7 +11,6 @@ This boilerplate is made for those who want to start a new project using typescr
 * Authentication via OAuth (Google ..)
 * App Theme (Dark and Light)
 * Support for i18n
-* [Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
  
 ## Teck Stack
 - [Next.js](https://nextjs.org)
@@ -22,7 +21,6 @@ This boilerplate is made for those who want to start a new project using typescr
 - [Emotion](https://emotion.sh/)
 - [ESLint](https://eslint.org)
 - [Prettier](https://prettier.io)
-- [SVGR](https://react-svgr.com/)
 
 ## Requirements
 - [Node.js](https://nodejs.org/)
@@ -57,6 +55,19 @@ This boilerplate is made for those who want to start a new project using typescr
     ```bash
     yarn start
     ```
+
+-   ## Naming Conventions
+
+    -   Folder Name : your-folder-name.
+    -   File Name : your-file-name.ts
+    -   Component Name : YourComponentName
+    -   Variable Name : yourVariableName
+    -   Private Variable : \_yourPrivateVariable
+    -   Constant Variable Name : CONSTANT_VARIABLE_NAME
+    -   Function Name : yourFunctionName()
+    -   Private Function Name : \_yourPrivateFunctionName()
+
+-  ## Folder structure
 
 
 ## Deployment
