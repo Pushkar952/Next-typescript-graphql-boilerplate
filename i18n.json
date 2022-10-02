@@ -4,6 +4,7 @@
     "pages": {
         "*": ["common"],
         "/": ["home"],
-        "/launches": ["launches"]
+        "/csr": ["csr"],
+        "/ssr": ["ssr"]
     }
 }

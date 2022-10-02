@@ -8,7 +8,7 @@ type Props = {
   launche: Launche;
 };
 
-const Launche: React.FC<Props> = ({ launche }) => {
+const CSR: React.FC<Props> = ({ launche }) => {
   if (!launche) return null;
   const imgSource = launche.links.mission_patch_small || '';
   const isSuccess = launche.launch_success || false;
@@ -58,4 +58,4 @@ const Launche: React.FC<Props> = ({ launche }) => {
   );
 };
 
-export default Launche;
+export default CSR;

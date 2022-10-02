@@ -4,7 +4,7 @@ import { GridList } from '@/components/gridList';
 import { Spinner } from '@/components/ui';
 import { QUERY_GET_LAUNCHES } from '@/services/graphql/launches';
 import React from 'react';
-import Launche from './Launche';
+import CSR from './Csr';
 import { LaunchesPast, LaunchesPastVariables } from '@/types/launche';
 
 const LaunchesPageComponent: React.FC = () => {
@@ -33,7 +33,7 @@ const LaunchesPageComponent: React.FC = () => {
         <GridList>
           {data.launchesPast.map(launche => {
             if (!launche) return;
-            return <Launche key={launche.id} launche={launche} />;
+            return <CSR key={launche.id} launche={launche} />;
           })}
         </GridList>
       </VStack>

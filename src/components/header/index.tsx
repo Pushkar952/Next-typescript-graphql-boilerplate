@@ -13,7 +13,6 @@ export const Header: React.FC = () => {
 
   const AuthInfo = useMemo(() => {
     if (session) {
-      console.log('session', session);
       return (
         <Box display="flex" alignItems="center">
           <Image src={session.user?.image ?? ""} alt="Logged in user" width={30} height={30} />
@@ -32,13 +31,13 @@ export const Header: React.FC = () => {
         <Logo />
       </Box>
       <Box ml="10" >
-        <NavBar href='/launches' feature='CSR' />
+        <NavBar href='/csr' feature='CSR' />
       </Box>
       <Box ml="10" >
-        <NavBar href='/launches' feature='SSR' />
+        <NavBar href='/ssr' feature='SSR' />
       </Box>
       <Box ml="10" >
-        <NavBar href='/launches' feature='REDUX' />
+        <NavBar href='/csr' feature='REDUX' />
       </Box>
       <Spacer />
       <ColorModeSwitcher mr="5" />
