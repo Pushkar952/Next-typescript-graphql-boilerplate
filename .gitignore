@@ -16,6 +16,7 @@ temp/
 .npm
 /locales
 schema.graphql
+next-env.d.ts
 
 # environment variables
 .env.local
