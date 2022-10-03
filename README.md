@@ -18,7 +18,6 @@ This boilerplate is made for those who want to start a new project using typescr
 - [GraphQl Client](https://www.apollographql.com/)
 - [NextAuth](https://next-auth.js.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Emotion](https://emotion.sh/)
 - [ESLint](https://eslint.org)
 - [Prettier](https://prettier.io)
 
