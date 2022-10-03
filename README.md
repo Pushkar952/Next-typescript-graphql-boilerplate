@@ -69,6 +69,45 @@ This boilerplate is made for those who want to start a new project using typescr
 
 -  ## Folder structure
 
+```
+nextjs-apollo-boilerplate
+├─ .env
+├─ .eslintrc
+├─ apollo.config.js
+├─ i18n.json
+├─ public
+├─ src
+│  ├─ components
+│  ├─ lib
+│  ├─ pages
+│  ├─ redux
+│  ├─ services
+│  │  ├─ api
+│  │  │  └─ apiClient.ts
+│  │  └─ graphql
+│  │     ├─ apolloClient.ts
+│  │     └─ launches.ts
+│  ├─ styles
+│  │  └─ theme
+│  │     ├─ foundations
+│  │     │  ├─ colors.ts
+│  │     │  ├─ fontSizes.ts
+│  │     │  ├─ layerStyles.ts
+│  │     │  └─ textStyles.ts
+│  │     ├─ index.ts
+│  │     └─ styles.ts
+│  └─ types
+│     ├─ declaration
+│     │  ├─ environment.d.ts
+│     │  ├─ index.d.ts
+│     └─ user.ts
+├─ test
+│  ├─ index.tsx
+│  ├─ jest.config.js
+│  └─ jest.setup.ts
+```;
+
+
 
 ## Deployment
 
@@ -80,4 +119,5 @@ You can deploy your application to [Vercel]((https://vercel.com/signup/)) by cli
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
 
