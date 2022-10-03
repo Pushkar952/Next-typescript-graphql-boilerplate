@@ -3,7 +3,7 @@ import AccessDenied from '@/components/auth/accessDenied';
 import LaunchesPageComponent from '@/components/pages/csr';
 import { GetStaticProps, NextPage } from 'next';
 import { useSession } from 'next-auth/react';
-import Head from 'next/head';
+// import Head from 'next/head';
 import SessionType from 'src/types/session';
 
 type Props = {
@@ -18,9 +18,6 @@ const CsrPage: NextPage<Props> = props => {
 
   return (
     <>
-      <Head>
-        <title>Launches Page</title>
-      </Head>
       <LaunchesPageComponent />
     </>
   );

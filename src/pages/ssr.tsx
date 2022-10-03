@@ -3,7 +3,6 @@ import AccessDenied from '@/components/auth/accessDenied';
 import { GetServerSideProps, NextPage } from 'next';
 import { QUERY_GET_LAUNCHES } from '@/services/graphql/launches';
 import { useSession } from 'next-auth/react';
-import Head from 'next/head';
 import SsrPage from '@/components/pages/ssr';
 import { createApolloClient } from '@/services/graphql/apolloClient';
 import { LaunchesPast } from '@/types/launche';
@@ -20,9 +19,6 @@ const Ssr: NextPage<LaunchesPast> = (props: LaunchesPast) => {
 
   return (
     <>
-      <Head>
-        <title>Launches Page</title>
-      </Head>
       <SsrPage {...props} />
     </>
   );

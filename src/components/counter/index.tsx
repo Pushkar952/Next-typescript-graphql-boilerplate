@@ -1,6 +1,6 @@
-import { counterActions } from '@/redux/actions';
-import { RootState } from '@/redux/reducers';
-import { useAppDispatch } from '@/redux/store';
+import { counterActions } from 'src/state/actions';
+import { RootState } from 'src/state/reducers';
+import { useAppDispatch } from 'src/state/store';
 import { Button, Flex, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
 import { useSelector } from 'react-redux';

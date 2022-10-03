@@ -37,7 +37,7 @@ export const Header: React.FC = () => {
         <NavBar href='/ssr' feature='SSR' />
       </Box>
       <Box ml="10" >
-        <NavBar href='/csr' feature='REDUX' />
+        <NavBar href='/appState' feature='App State' />
       </Box>
       <Spacer />
       <ColorModeSwitcher mr="5" />

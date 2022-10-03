@@ -38,8 +38,8 @@
             "@/services": ["src/services"],
             "@/types/*": ["src/types/*"],
             "@/types": ["src/types"],
-            "@/redux/*": ["src/redux/*"],
-            "@/redux": ["src/redux"],
+            "@/redux/*": ["src/state/*"],
+            "@/redux": ["src/state"],
             "@/i18n": ["./i18n.json"],
             "@/test/*": ["test/*"],
             "@/test": ["test"]

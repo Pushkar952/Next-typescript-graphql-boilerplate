@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import counterSlice from '@/redux/slices/counter';
+import counterSlice from 'src/state/slices/counter';
 
 const rootReducer = combineReducers({ counter: counterSlice.reducer });
 

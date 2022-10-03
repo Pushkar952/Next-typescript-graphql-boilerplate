@@ -7,7 +7,7 @@ import theme from '@/styles/theme';
 import { useApollo } from '@/services/graphql/apolloClient';
 import { ApolloProvider } from '@apollo/client';
 import { Provider } from 'react-redux';
-import store from '@/redux/store';
+import store from 'src/state/store';
 import Layout from '@/components/layout';
 
 function App({ Component, pageProps: { session, ...pageProps } }: AppProps): JSX.Element {

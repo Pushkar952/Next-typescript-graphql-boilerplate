@@ -4,7 +4,7 @@ Boilerplate for building applications using Next.js with Typescript and Graphql 
 
 <img src="public/assets/images/banner.png" width="100%" alt="Banner">
 
-This boilerplate is made for those who want to start a new project using typescript, Apollo, Graphql, Redux, etc., which are often used in real-world projects along with Next.js.
+This boilerplate is made for those who want to start a new project using typescript, Graphql, Redux, etc., which are often used in real-world projects along with Next.js.
 
 
 ## Features
@@ -78,15 +78,16 @@ nextjs-apollo-boilerplate
 ├─ public
 ├─ src
 │  ├─ components
+│  ├─ hooks
 │  ├─ lib
 │  ├─ pages
-│  ├─ redux
+│  ├─ state
 │  ├─ services
 │  │  ├─ api
 │  │  │  └─ apiClient.ts
 │  │  └─ graphql
 │  │     ├─ apolloClient.ts
-│  │     └─ launches.ts
+│  │     └─ sampleQuery/mutation.ts
 │  ├─ styles
 │  │  └─ theme
 │  │     ├─ foundations
