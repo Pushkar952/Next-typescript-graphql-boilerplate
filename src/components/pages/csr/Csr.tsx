@@ -27,7 +27,7 @@ const CSR: React.FC<Props> = ({ launche }) => {
             </Box>
           }
         />
-        <VStack w="full" pl="5" align="start">
+        {/* <VStack w="full" pl="5" align="start">
           <Box fontSize="lg" fontWeight="bold">
             {launche.mission_name}
           </Box>
@@ -41,10 +41,10 @@ const CSR: React.FC<Props> = ({ launche }) => {
           >
             {isSuccess ? 'SUCCESS' : 'FAIL'}
           </Badge>
-        </VStack>
+        </VStack> */}
       </Box>
-      <Divider my="3" />
-      <Box>
+      {/* <Divider my="3" /> */}
+      {/* <Box>
         <Label>Launch Site</Label>
         <Box fontSize="md" fontWeight="bold">
           {launche.launch_site?.site_name_long}
@@ -53,7 +53,7 @@ const CSR: React.FC<Props> = ({ launche }) => {
         <Box fontSize="md" fontWeight="bold">
           {launche.rocket?.rocket_name}
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 };

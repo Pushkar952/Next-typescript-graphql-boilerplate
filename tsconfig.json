@@ -45,6 +45,6 @@
             "@/test": ["test"]
         }
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": ["next-env.d.ts", "types/**/*.ts", "**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules", "generated/globalTypes.ts", "test/*"]
 }

@@ -43,8 +43,8 @@ const SsrPageComponent: React.FC<Props> = ({ launche }) => {
           </Badge>
         </VStack>
       </Box>
-      <Divider my="3" />
-      <Box>
+      {/* <Divider my="3" /> */}
+      {/* <Box>
         <Label>Launch Site</Label>
         <Box fontSize="md" fontWeight="bold">
           {launche.launch_site?.site_name_long}
@@ -53,7 +53,7 @@ const SsrPageComponent: React.FC<Props> = ({ launche }) => {
         <Box fontSize="md" fontWeight="bold">
           {launche.rocket?.rocket_name}
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 };

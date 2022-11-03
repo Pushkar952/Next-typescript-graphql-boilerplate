@@ -20,6 +20,8 @@ next-env.d.ts
 
 # environment variables
 .env.local
+.env.development
+.env.production
 .env.*.local
 !.env.example
 

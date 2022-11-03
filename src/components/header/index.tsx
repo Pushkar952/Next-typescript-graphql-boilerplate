@@ -9,21 +9,23 @@ import LogoutButton from './LogoutButton';
 
 export const Header: React.FC = () => {
 
-  const { data: session } = useSession();
+  const { data: token } = useSession();
 
   const AuthInfo = useMemo(() => {
-    if (session) {
+    console.log('session', token?.user?.email);
+
+    if (token) {
       return (
         <Box display="flex" alignItems="center">
-          <Image src={session.user?.image ?? ""} alt="Logged in user" width={30} height={30} />
-          <Box px={2} mr="5">{session.user ? session.user.email : 'ERROR'}</Box>
+          {/* <Image src={session.user?.image ?? ""} alt="Logged in user" width={30} height={30} /> */}
+          {/* <Box px={2} mr="5">{session.user ? session.user.email : 'ERROR'}</Box> */}
           <LogoutButton />
         </Box>
       );
     } else {
       return <LoginButton />;
     }
-  }, [session]);
+  }, [token]);
 
   return (
     <Box h="58" bg="headerBg" display="flex" px="10" alignItems="center">

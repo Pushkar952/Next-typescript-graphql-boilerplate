@@ -28,7 +28,7 @@ const LaunchesPageComponent: React.FC = () => {
     <Box w="full" py={10}>
       <VStack>
         <Heading size="md" color="gray.500" mb={3}>
-          Past SpaceX Launches
+          Rocket Launches
         </Heading>
         <GridList>
           {data.launchesPast.map(launche => {
