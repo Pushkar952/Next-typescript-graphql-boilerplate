@@ -6,6 +6,8 @@ import { useSession } from 'next-auth/react';
 import SsrPage from '@/components/pages/ssr';
 import { createApolloClient } from '@/services/graphql/apolloClient';
 import { LaunchesPast } from '@/types/launche';
+import { getSession } from "next-auth/react";  // admit I don't understand why this works on server side
+import { NextApiRequest } from 'next';
 
 
 
@@ -23,6 +25,7 @@ const Ssr: NextPage<LaunchesPast> = (props: LaunchesPast) => {
     </>
   );
 };
+
 
 export const getServerSideProps: GetServerSideProps = async () => {
 

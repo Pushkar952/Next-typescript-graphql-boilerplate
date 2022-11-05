@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import NextAuth, { Account, Awaitable, NextAuthOptions, Profile, User, } from 'next-auth';
+import NextAuth, { NextAuthOptions } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 const options: NextAuthOptions = {
     providers: [
@@ -12,19 +12,27 @@ const options: NextAuthOptions = {
     session: { strategy: 'jwt' },
     debug: false,
     callbacks: {
-        // async jwt(token: JWT, account: Account, user: User) {
-        //     console.log('jwt', token, account, user);
-        //     if (account ?.access_token) {
-        //         token.accessToken = account.access_token;
-        //     }
-        //     return account ? { ...token, ...account } : token;
-        // }
-        async signIn(user: User, account: Account, profile: Profile) {
-            console.log("We will do api call here!");
+        async jwt({ token, user, account, profile, isNewUser }) {
+            if (account ?.access_token) {
+                token.accessToken = account.access_token;
+            }
+            console.log('jwt', token, user, account, profile, isNewUser);
+
+            return token;
+        },
+        async signIn({ user, account, profile, email, credentials }) {
+
+
             await sleep(1000);
-            console.log("sign in", user, account, profile);
-            console.log("Api call main be success or faliure based on api call and we will retrun true or false based on that!");
+            account.access_token = "123456789";
+            console.log("sign in", user, account, profile, email, credentials);
             return true;
+        },
+        async session({ session, token, user }) {
+            session.accessToken = token.accessToken
+
+            console.log("callback session", session, token, user);
+            return session;
         }
     }
 
