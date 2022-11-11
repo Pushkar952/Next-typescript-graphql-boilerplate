@@ -12,14 +12,18 @@ import Layout from '@/components/layout';
 
 function MyApp({ pageProps, Component }: any): JSX.Element {
   const { data: session } = useSession();
+
   console.log('session', session);
   useEffect(() => {
-    console.log('session', session);
+    if (session) {
+      console.log('session', session.accessToken);
+    }
+
   }, [session]);
 
   return (
     <div>
-      <ApolloProvider client={createApolloClient('token', session)}>
+      <ApolloProvider client={createApolloClient(session?.accessToken as string)}>
         <Provider store={store}>
           <Layout>
             <Head>

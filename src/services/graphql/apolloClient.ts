@@ -1,41 +1,44 @@
 import { isServer } from '@/lib/utils';
-import { ApolloClient, InMemoryCache, NormalizedCacheObject } from '@apollo/client';
-import React from 'react';
+import { ApolloClient, InMemoryCache } from '@apollo/client';
+// import React from 'react';
 
-let _apolloClient: ApolloClient<NormalizedCacheObject> | null = null;
+// let _apolloClient: ApolloClient<NormalizedCacheObject> | null = null;
 
-export const createApolloClient = (token: string, session: any) => {
-    console.log("createApolloClient", token, session);
+export const createApolloClient = (token: string) => {
+    console.log("createApolloClient", token);
 
     return new ApolloClient({
         ssrMode: isServer(),
         uri: process.env.NEXT_PUBLIC_API_URL,
         cache: new InMemoryCache(),
+        headers: {
+            authorization: token ? `Bearer ${token}` : '',
+        },
     });
 };
 
-export const initializeApollo = (initialState = {}, token: string) => {
-    const client = _apolloClient ?? createApolloClient(token, '');
+// export const initializeApollo = (initialState = {}, token: string) => {
+//     const client = _apolloClient ?? createApolloClient(token);
 
-    if (initialState) {
-        const existCache = client.extract();
-        client.cache.restore({ ...existCache, ...initialState });
-    }
+//     if (initialState) {
+//         const existCache = client.extract();
+//         client.cache.restore({ ...existCache, ...initialState });
+//     }
 
-    // for server side rendering(or generation) always create a new apollo client
-    if (isServer()) {
-        return client;
-    }
+//     // for server side rendering(or generation) always create a new apollo client
+//     if (isServer()) {
+//         return client;
+//     }
 
-    // create apollo client only once.
-    if (!_apolloClient) {
-        _apolloClient = client;
-    }
+//     // create apollo client only once.
+//     if (!_apolloClient) {
+//         _apolloClient = client;
+//     }
 
-    return _apolloClient;
-};
+//     return _apolloClient;
+// };
 
-export const useApollo = (initialState: NormalizedCacheObject, token: string) => {
-    const store = React.useMemo(() => initializeApollo(initialState, token), [initialState, token]);
-    return store;
-};
+// export const useApollo = (initialState: NormalizedCacheObject, token: string) => {
+//     const store = React.useMemo(() => initializeApollo(initialState, token), [initialState, token]);
+//     return store;
+// };
