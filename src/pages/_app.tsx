@@ -1,34 +1,46 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Head from 'next/head';
 import { AppProps } from 'next/app';
-import { SessionProvider } from 'next-auth/react';
+import { SessionProvider, useSession } from 'next-auth/react';
 import { ChakraProvider } from '@chakra-ui/react';
 import theme from '@/styles/theme';
-import { useApollo } from '@/services/graphql/apolloClient';
+import { createApolloClient } from '@/services/graphql/apolloClient';
 import { ApolloProvider } from '@apollo/client';
 import { Provider } from 'react-redux';
 import store from 'src/state/store';
 import Layout from '@/components/layout';
 
-function App({ Component, pageProps: { session, ...pageProps } }: AppProps): JSX.Element {
-  const apolloClient = useApollo({}, '');
+function MyApp({ pageProps, Component }: any): JSX.Element {
+  const { data: session } = useSession();
+  console.log('session', session);
+  useEffect(() => {
+    console.log('session', session);
+  }, [session]);
 
+  return (
+    <div>
+      <ApolloProvider client={createApolloClient('token', session)}>
+        <Provider store={store}>
+          <Layout>
+            <Head>
+              <title>NextJs TypeScript with graphql client </title>
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Head>
+            <Component pageProps={pageProps} />
+          </Layout>
+        </Provider>
+      </ApolloProvider>
+    </div>
+  );
+}
+
+function App({ Component, pageProps: { session, ...pageProps } }: AppProps): JSX.Element {
   return (
     <ChakraProvider theme={theme}>
       <SessionProvider session={session}>
-        <ApolloProvider client={apolloClient}>
-          <Provider store={store}>
-            <Layout>
-              <Head>
-                <title>NextJs TypeScript with graphql client </title>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-              </Head>
-              <Component {...pageProps} />
-            </Layout>
-          </Provider>
-        </ApolloProvider>
+        <MyApp pageProps={pageProps} Component={Component} ></MyApp>
       </SessionProvider>
-    </ChakraProvider>
+    </ChakraProvider >
   );
 }
 

@@ -4,7 +4,9 @@ import React from 'react';
 
 let _apolloClient: ApolloClient<NormalizedCacheObject> | null = null;
 
-export const createApolloClient = (token: string) => {
+export const createApolloClient = (token: string, session: any) => {
+    console.log("createApolloClient", token, session);
+
     return new ApolloClient({
         ssrMode: isServer(),
         uri: process.env.NEXT_PUBLIC_API_URL,
@@ -13,7 +15,7 @@ export const createApolloClient = (token: string) => {
 };
 
 export const initializeApollo = (initialState = {}, token: string) => {
-    const client = _apolloClient ?? createApolloClient(token);
+    const client = _apolloClient ?? createApolloClient(token, '');
 
     if (initialState) {
         const existCache = client.extract();
