@@ -2,6 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import NextAuth, { NextAuthOptions } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
 import LinkedInProvider from "next-auth/providers/linkedin";
+import FacebookProvider from "next-auth/providers/facebook";
 
 const options: NextAuthOptions = {
     providers: [
@@ -15,6 +16,10 @@ const options: NextAuthOptions = {
             client: {
                 token_endpoint_auth_method: "client_secret_post",
             },
+        }),
+        FacebookProvider({
+            clientId: process.env.FACEBOOK_CLIENT_ID as string,
+            clientSecret: process.env.FACEBOOK_CLIENT_SECRET as string,
         })
 
 
