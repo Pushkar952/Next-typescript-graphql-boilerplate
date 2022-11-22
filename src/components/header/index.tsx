@@ -13,7 +13,7 @@ export const Header: React.FC = () => {
   // console.log('session', session);
 
   const AuthInfo = useMemo(() => {
-    console.log('inside use memo', session);
+    // console.log('inside use memo', session);
 
 
     if (session) {

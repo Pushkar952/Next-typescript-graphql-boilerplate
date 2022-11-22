@@ -12,7 +12,7 @@ type Props = {
 
 const CsrPage: NextPage<Props> = props => {
   const { data: session, status } = useSession();
-  console.log('session in CSR', session);
+  // console.log('session in CSR', session);
 
 
   if (status === 'loading') return <Spinner />;

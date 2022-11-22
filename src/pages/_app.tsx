@@ -13,10 +13,10 @@ import Layout from '@/components/layout';
 function MyApp({ pageProps, Component }: any): JSX.Element {
   const { data: session } = useSession();
 
-  console.log('session', session);
+  // console.log('session', session);
   useEffect(() => {
     if (session) {
-      console.log('session', session.accessToken);
+      console.log('session in use effect', session.accessToken);
     }
 
   }, [session]);

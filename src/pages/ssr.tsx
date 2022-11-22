@@ -17,7 +17,7 @@ const Ssr: NextPage<LaunchesPast> = (props: LaunchesPast) => {
 
   if (status === 'loading') return <Spinner />;
   if (!session) return <AccessDenied />;
-  console.log(`ssr`, props);
+  // console.log(`ssr`, props);
 
   return (
     <>
